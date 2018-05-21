@@ -6,11 +6,13 @@ import org.junit.jupiter.api.Test;
 
 import leetcodePractice.P001TwoSum;
 import leetcodePractice.P003LongestSubstringWithoutRepeatingCharacters;
+import leetcodePractice.P005LongestPalindromicSubstring;
 
 class P001 {
 
 	P001TwoSum twoSum = new P001TwoSum();
 	P003LongestSubstringWithoutRepeatingCharacters p003 = new P003LongestSubstringWithoutRepeatingCharacters();
+	P005LongestPalindromicSubstring p005 = new P005LongestPalindromicSubstring();
 	
 	@Test
 	void test() {
@@ -29,6 +31,14 @@ class P001 {
 	void p003Test() {
 		int answer = p003.lengthOfLongestSubstring("abcabcbb");
 		int wantedAnswer = 3;
+		
+		assertEquals(wantedAnswer,answer);
+	}
+	
+	@Test
+	void p005Test() {
+		String answer = p005.longestPalindrome("babad");
+		String wantedAnswer = "bab";
 		
 		assertEquals(wantedAnswer,answer);
 	}
